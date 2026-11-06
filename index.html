@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SumGrid: Cross Number Puzzle - Rèn Luyện Tư Duy Logic Mỗi Ngày</title>
-    <meta name="description" content="Thử thách trí não với trò chơi giải đố số tối giản SumGrid. Đa dạng chế độ 2x2, 3x3, 4x4, 5x5 cùng hệ thống theo dõi điểm IQ và chuỗi ngày chơi.">
+    <meta name="description" content="Challenge your brain with SumGrid, a minimalist number puzzle game. Enjoy diverse grid sizes from 2x2 to 5x5, track your IQ score, and keep your daily streak alive.">
 
     <!-- Favicon sử dụng chính file logo của bạn -->
     <link rel="icon" type="image/png" href="mascotlogo2.png">
@@ -97,15 +97,15 @@
                     </h1>
 
                     <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 mb-8 font-normal leading-relaxed">
-                        Thử thách kỹ năng logic và toán học của bạn với các câu đố số tối giản hàng ngày. 
-                        Rèn luyện phản xạ, duy trì chuỗi ngày chơi và theo dõi chỉ số IQ trí não trực quan!
+                        Challenge your logic and math skills with minimalist daily number puzzles. 
+                        Train your reflexes, build your daily streak, and visually track your brain's IQ!
                     </p>
 
                     <!-- Buttons -->
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
                         <a href="https://play.google.com/store/apps/details?id=com.sincostan.sumgrid" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg shadow-xl shadow-emerald-600/25 transition-all hover:scale-105 flex items-center justify-center gap-3">
                             <img src="google_play.png" alt="Google Play Icon" class="w-6 h-6 object-contain">
-                            <span>Tải Miễn Phí trên Google Play</span>
+                            <span>Download Free on Google Play</span>
                         </a>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                         </div>
 
                         <!-- 2x2 Game Grid Area -->
-                        <div class="max-w-[260px] mx-auto mb-6">
+                        <div class="max-w-[260px] mx-auto -translate-x-10 mb-6">
                             <!-- Top Target Numbers (Không nền, chữ đen/trắng in đậm) -->
                             <div class="grid grid-cols-3 gap-3 mb-2 text-center items-end">
                                 <div></div>
@@ -151,7 +151,7 @@
                         <!-- Dynamic Feedback Text (Giống câu hướng dẫn trong hình) -->
                         <div class="text-center mb-6 px-2 min-h-[40px] flex items-center justify-center">
                             <p id="feedbackText" class="text-sm font-semibold text-slate-700 dark:text-slate-300 leading-snug">
-                                Chỉnh ô trống để tổng bằng số mục tiêu hàng và cột!
+                                Adjust the empty cells so that the sums match the target numbers for each row and column!
                             </p>
                         </div>
 
@@ -186,10 +186,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
-                    Giao Diện Game Thực Tế
+                    Real-World Game Interface
                 </h2>
                 <p class="text-slate-600 dark:text-slate-400 text-lg">
-                    Trải nghiệm tối giản, hiện đại và tập trung tối đa vào tư duy logic.
+                    Experience minimalism, modern design, and maximum focus on logical thinking.
                 </p>
             </div>
 
@@ -271,9 +271,9 @@
             const val1 = document.getElementById('cell-1').innerText.trim();
             const val3 = document.getElementById('cell-3').innerText.trim();
             if (val1 === solution[1] && val3 === solution[3]) {
-                document.getElementById('feedbackText').innerHTML = "<span class='text-emerald-500 font-bold'>🎉 Chính xác! Bạn đã giải xong!</span>";
+                document.getElementById('feedbackText').innerHTML = "<span class='text-emerald-500 font-bold'>🎉 Correct! You've solved it!</span>";
             } else {
-                document.getElementById('feedbackText').innerHTML = "<span class='text-rose-500 font-bold'>❌ Chưa đúng, thử lại nhé!</span>";
+                document.getElementById('feedbackText').innerHTML = "<span class='text-rose-500 font-bold'>❌ Not quite right, try again!</span>";
             }
         }
         window.onload = function() { updateGridHighlights(); };
